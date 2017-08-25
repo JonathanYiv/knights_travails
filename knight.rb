@@ -1,0 +1,2 @@
+class Knight
+end
