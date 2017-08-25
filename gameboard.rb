@@ -1,5 +1,7 @@
+require_relative "knight.rb"
+
 class Gameboard
-	attr_accessor :pieces, :positions
+	attr_accessor :pieces, :positions, :knight
 
 	def initialize
 		@pieces = {
@@ -16,7 +18,7 @@ class Gameboard
 			white_knight: "♞",
 			white_pawn: "♟" 
 		}
-		@positions = Array.new(8, Array.new(8, " "))
+		@positions = Array.new(8) { Array.new(8, " ") }
 	end
 
 	def display
@@ -42,6 +44,11 @@ class Gameboard
 		print "   "
 		('a'..'h').each { |letter| print "  #{letter}  "}
 		puts ""
+	end
+
+	def add_knight(position)
+		@knight = Knight.new(position)
+		@positions[@knight.x_position][@knight.y_position] = @pieces[:white_knight]
 	end
 end
 
