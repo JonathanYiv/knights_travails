@@ -8,6 +8,8 @@ This is a project from [The Odin Project](https://www.theodinproject.com/courses
 ![Knight Possible Moves](/moves.gif)
 ![Knight Movement](/travails.gif)
 
+![Screenshot](/knights_travails.png)
+
 ## Installation
 
 Open your Terminal/Command Line. Navigate to the directory where your version will live. Type in the following:

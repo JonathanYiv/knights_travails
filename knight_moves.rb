@@ -62,7 +62,7 @@ def knight_moves(gameboard, start, finish)
 end
 
 gameboard = Gameboard.new
-knight_moves(gameboard, [0,0], [7,7])
+knight_moves(gameboard, [0,0], [1,3])
 
 =begin
 Chess Board
