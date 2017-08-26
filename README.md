@@ -46,3 +46,5 @@ $ ruby knights_travails.rb
 ## Post-Project Thoughts
 
 This project is currently incomplete.
+
+1. I know that fully implementing Chess is only two projects away, so I put in a little extra effort into fleshing out class Gameboard so it can handle displaying the game appropriately. I'm definitely excited to get to that project in the near future. Odin has me twiddling in RSpec and Git a little bit more and then I'll be there...
