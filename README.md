@@ -54,3 +54,5 @@ $ ruby knights_travails.rb
 3. I am fairly proud of myself for completing this one.
 
 4. Eventually, I may touch it up and add options for input. The user would be able to run the script and input a starting point and ending point. The script would then display the step-by-step moves from the starting to ending point. However, I know I will be fully implementing Chess shortly so I am eager to push forwards.
+
+5. Apparently, I implemented [Dijkstra's Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm).
