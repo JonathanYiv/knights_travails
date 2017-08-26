@@ -45,6 +45,10 @@ $ ruby knights_travails.rb
 
 ## Post-Project Thoughts
 
-This project is currently incomplete.
-
 1. I know that fully implementing Chess is only two projects away, so I put in a little extra effort into fleshing out class Gameboard so it can handle displaying the game appropriately. I'm definitely excited to get to that project in the near future. Odin has me twiddling in RSpec and Git a little bit more and then I'll be there...
+
+2. The #knight_moves method was actually fairly easy to implement. First, I created a matrix of all existing positions. Then I performed a breadth-first search to fill an array 'distance_info' with each point's distance to the goal and their parent position. The breadth-first search continued until it reached the starting point. Then I iterated through the starting Knight's possible moves and selected the move that had the least distance from the goal position. This information was passed on to the display which moved the knight, and then searched for the next move until the full operation was complete.
+
+3. I am fairly proud of myself for completing this one.
+
+4. Eventually, I may touch it up and add options for input. The user would be able to run the script and input a starting point and ending point. The script would then display the step-by-step moves from the starting to ending point. However, I know I will be fully implementing Chess shortly so I am eager to push forwards.

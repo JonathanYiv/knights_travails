@@ -33,17 +33,36 @@ def knight_moves(gameboard, start, finish)
 			end
 		end
 	end
-	puts distance_info.inspect
+
+	start_knight = Knight.new(start)
+
+	smallest_distance = 63
+	shortest_path = nil
+	until shortest_path == finish
+		start_knight.possible_moves.each do |move|
+			if distance_info[move[0]][move[1]][:distance] != nil && distance_info[move[0]][move[1]][:distance] < smallest_distance
+				smallest_distance = distance_info[move[0]][move[1]][:distance]
+				shortest_path = move
+			end
+		end
+		solution << shortest_path
+		start_knight = Knight.new(shortest_path)
+	end
+
+	puts "The shortest path from #{start} to #{finish} is #{solution.inspect}."
+	print "\nThe Knight starts at #{start}.\n\n"
+
+	gameboard.add_knight(solution.shift)
+	gameboard.display
+	solution.each_with_index do |move, index| 
+		gameboard.move_knight(move)
+		print "\nThen it moves to #{solution[index]}.\n\n"
+		gameboard.display
+	end
 end
 
 gameboard = Gameboard.new
-
-knight_moves(gameboard, [0,0], [1,2])
-gameboard.display
-knight_moves(gameboard, [0,0], [3,3])
-#knight_moves(gameboard, [3,3], [0,0])
-
-gameboard.display
+knight_moves(gameboard, [0,0], [7,7])
 
 =begin
 Chess Board

@@ -42,12 +42,19 @@ class Gameboard
 
 	def x_axis
 		print "   "
-		('a'..'h').each { |letter| print "  #{letter}  "}
+		(0..7).each { |letter| print "  #{letter}  "}
 		puts ""
 	end
 
 	def add_knight(position)
 		@knight = Knight.new(position)
+		@positions[@knight.x_position][@knight.y_position] = @pieces[:white_knight]
+	end
+
+	def move_knight(position)
+		@positions[@knight.x_position][@knight.y_position] = " "
+		@knight.x_position = position[0]
+		@knight.y_position = position[1]
 		@positions[@knight.x_position][@knight.y_position] = @pieces[:white_knight]
 	end
 end
